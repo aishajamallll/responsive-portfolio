@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #172554;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 350px;
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #172554;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.section {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    color: #172554;
+}
+
+.section > p {
+    max-width: 750px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    overflow-wrap: anywhere;
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet layout */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+}
+
+/* Phone layout */
+@media (max-width: 480px) {
+    .navbar ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 300px;
+    }
+
+    .section {
+        padding: 35px 20px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
